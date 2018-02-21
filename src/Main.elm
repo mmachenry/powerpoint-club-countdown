@@ -66,8 +66,8 @@ timedDiv elapsed delay color =
 
 hexCode : Color -> Bool -> String
 hexCode color done = case color of
-  Green -> if done then "#D1F2EB" else "#2ECC71"
-  Red -> if done then "#F5B7B1" else "#E74C3C"
+  Green -> if done then "#2ECC71" else "#D1F2EB"
+  Red -> if done then "#E74C3C" else "#F5B7B1"
 
 summary model =
   div [ style [("display", if model.elapsed >= model.maxSeconds
