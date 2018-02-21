@@ -41,7 +41,8 @@ view model = div [] [
 
 controls : Model -> Html Msg
 controls model = div [] [
-    button [ onClick Play ] [ text "Play" ],
+    button [ onClick Play ]
+           [ text (if model.countdownActive then "Pause" else "Play") ],
     button [ onClick Stop ] [ text "Stop" ] ]
 
 lights : Model -> Html Msg
