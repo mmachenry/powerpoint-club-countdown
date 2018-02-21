@@ -3,7 +3,7 @@ module Main exposing (main)
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (onClick, onInput)
-import Time exposing (Time, second, millisecond)
+import Time exposing (Time, second)
 
 main = Html.program {
   init = (initModel, Cmd.none),
@@ -88,5 +88,5 @@ updateModel msg model = case msg of
   Stop -> { model | elapsed = 0, countdownActive = False }
 
 subscriptions : Model -> Sub Msg
-subscriptions model = Time.every millisecond Tick
+subscriptions model = Time.every second Tick
 
